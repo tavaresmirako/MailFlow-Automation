@@ -1,5 +1,3 @@
-# MailFlow-Automation
-
 # 📧 MailFlow Automation
 
 Classificador inteligente de e-mails capaz de distinguir automaticamente entre **Produtivo** e **Improdutivo**, sugerindo uma resposta adequada de forma rápida e organizada.  
@@ -59,3 +57,86 @@ Além do modo client-side, o projeto também possui versão **com Inteligência 
     "categoria": "Produtivo",
     "sugestao_resposta": "Olá! Registramos sua solicitação referente ao pedido 123. Nossa equipe vai verificar e retornar em breve."
   }
+
+
+
+
+🏗️ Estrutura do Projeto
+bash
+Copiar
+Editar
+MailFlow-Automation/
+├── app.py                 # API Flask (quando usar backend/IA)
+├── requirements.txt       # Dependências do backend
+├── templates/
+│   └── index.html         # Interface web
+├── static/
+│   ├── css/style.css      # Estilos (backend)
+│   └── js/script.js       # Lógica frontend (backend)
+└── docs/                  # Versão estática para GitHub Pages (sem IA)
+    ├── index.html
+    └── static/
+        ├── css/style.css
+        └── js/script.js
+        
+🔧 Instalação (versão backend com IA)
+Clone o repositório e instale as dependências:
+
+bash
+Copiar
+Editar
+git clone https://github.com/tavaresmirako/MailFlow-Automation.git
+cd MailFlow-Automation
+pip install -r requirements.txt
+Crie um arquivo .env com:
+
+env
+Copiar
+Editar
+OPENAI_API_KEY=your_api_key_here
+OPENAI_MODEL=gpt-4o-mini
+MOCK_MODE=0
+DEBUG_VERBOSE=1
+Execute:
+
+bash
+Copiar
+Editar
+python app.py
+Acesse em: http://127.0.0.1:8000
+
+🌐 Publicação no GitHub Pages (sem IA)
+A versão client-side está em /docs.
+Para publicar:
+
+Commit/push para a branch main.
+
+No GitHub: Settings → Pages → Source → main /docs.
+
+Acesse a URL pública gerada.
+
+🛠️ Tecnologias Utilizadas
+Flask (backend API com IA)
+
+Flask-CORS (CORS no backend)
+
+OpenAI (IA avançada)
+
+HTML5, CSS3 e JavaScript (frontend sem IA)
+
+GitHub Pages (deploy gratuito do frontend)
+
+📌 Roadmap
+ Classificação básica (mock/local sem IA)
+
+ Deploy client-side no GitHub Pages
+
+ Deploy backend (Flask + OpenAI) em Railway/Render
+
+ Dashboard de histórico de e-mails
+
+ Treinamento de modelos customizados
+
+📜 Licença
+Este projeto está sob a licença MIT – sinta-se livre para usar e modificar.
+
