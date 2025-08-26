@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Classificador de E-mails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Classificador de E-mails com IA</h1>
+
+        <label for="texto_email" class="label">Conteúdo do e-mail</label>
+        <textarea id="texto_email" placeholder="Cole aqui o conteúdo do e-mail..."></textarea>
+
+        <button id="btnAnalisar">Analisar</button>
+
+        <p id="alerta" class="alerta" style="display:none;"></p>
+
+        <div id="resultado" class="resultado" style="display:none;">
+            <p><strong>Categoria:</strong> <span id="categoria">-</span></p>
+            <p><strong>Sugestão de Resposta:</strong></p>
+            <p id="sugestao_resposta">-</p>
+        </div>
+
+        <div class="footer">
+            <small>Healthcheck: <code id="health">checando...</code></small>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
