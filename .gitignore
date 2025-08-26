@@ -10,3 +10,4 @@ venv/
 # Build/Cache
 dist/
 build/
+.env
